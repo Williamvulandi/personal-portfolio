@@ -9,7 +9,7 @@
  </head>
  <body>
 <div id="header">
-    <div class="container">
+    <div class="container-home">
         <nav>
             <img src="images/logo.png" class="logo">
             <ul>
@@ -22,13 +22,13 @@
         </nav>
         <div class="header-text">
             <p>Juniour Software Developer</p>
-            <h1>Hi, I'm <span>William</span><br>Vulandi From South Africa</h1>
+            <h2>Hi, I'm <span>William</span><br>Vulandi From South Africa</h2>
         </div>
     </div>
 </div>
 <!-- -----------about----------- -->
 <div id="about">
-    <div class="container">
+    <div class="container-about">
         <div class="row">
             <div class="about-col-1">
                 <img src="images/user.png">
@@ -36,19 +36,42 @@
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>I am a dedicated and pasionate Junior Software Developer, hungry for challenges and eager to learn. Ready to dive into coding and make an impact from day one.</p>
-
+                
                 <div class="tab-titles">
-                    <p class="tab-links active-link">sills</p>
-                    <p class="tab-links">experience</p>
-                    <p class="tab-links">education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')"></p>Education</p>
     </div>
-    <div class="tab-contents">
-</div>
-</dive>
-</dive>
+    <div class="tab-contents active-tab" id="skills">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>    
+            <li>Java Script</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+            <li>Developed a fully functional calculator using HTML,CSS, Java Script</li>
+            <li>Implimented basic arithmetic operations and user interface design</li>
+            <li>Gained a practical experience in web development and JavaScript programming through hands-on project work</li>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li>Training at AlX institute</li>
+                    <li>HTML, CSS, JavaScript basics at Zio institute</li>
+                    <li>Currently passed the first assessment at Code Space</li>
+                </ul>
+            </div>
+        </ul>
         </div>
+    </div> 
     </div>
 
+    <script>
+
+        var tablinnks = document.getElementsByClassName("tab-links");
+        var tablinnks = document.getElementsByClassName("tab-contents");
+
+    </script>
 
  </body>
  </html>

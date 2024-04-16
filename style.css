@@ -8,15 +8,25 @@ body{
     background-color: #080808;
     color: #fff;
 }
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/background.png);
-    background-size: cover;
-    background-position: center;
+/* #header{
+
+    
+    } */
+    .container-home{
+        padding: 10px 10%   ;
+        background-image: url(images/background.png);
+        background-size:100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+
     }
-    .container{
+    .container-about{
         padding: 10px 10%;
+        width: 100%;
+        height: 100vh;
+
     }
 
     nav{
@@ -58,12 +68,12 @@ body{
     .header-text{
         margin-top: 20%;
         font-size: 30px;
-        .header-text h1{
+        .header-text h2{
             font-size: 60px;
             margin-top: 20px;
         }
     }
-    .header-text h1 span{
+    .header-text h2 span{
         color: #ff004f;
     }
     /*-----------about-----------*/
