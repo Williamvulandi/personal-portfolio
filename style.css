@@ -29,6 +29,25 @@ body{
 
     }
 
+
+    /* Make the navigation bar fixed at the top */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #111; /* Or your preferred background color */
+    padding: 0 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Add padding to the top of the header-content to prevent it from being hidden under the fixed nav */
+.container-home {
+    padding-top: 90px; /* Adjust this value to match your nav height */
+}
+
+
     nav{
         display: flex;
         align-items: center;
@@ -77,64 +96,654 @@ body{
         color: #ff004f;
     }
     /*-----------about-----------*/
-    #about{
-        padding: 80px 0;
-        color: #ababab;
-    }
-    .row{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+    /*-----------About-----------*/
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+ 
+/* Re-using the .row flexbox layout you already have */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+ 
+.about-col-1 {
+    flex-basis: 30%;
+    background: none; /* removes grey background */
+    border-radius: 15px; /* keeps the original rounded rectangle shape */
+    padding: 5px; /* small padding for the border effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid red; /* red accent border */
+}
 
-    .about-col-1{
-        flex-basis: 35%;
-    }
-    .about-col-1 img{
-        width: 100%;
-        border-radius: 15px;
-    }
-    .about-col-2{
-        flex-basis: 60%;
-    }
+.about-col-1 img {
+    width: 100%; /* image fills the container */
+    border-radius: 15px; /* matches the container for smooth edges */
+    display: block;
+}
 
-    .sub-title{
-        font-size: 60px;
-        font-weight: 600;
-        color: #fff;
-    }
 
-    .tab-titles{
-        display: flex;
-        margin: 20px 0 40px;
-    }
-    .tab-links{
-        margin-right: 50px;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
-        position:relative;
-    }
-    .tab-links::after{
-        content: '';
-        width: 0;
-        height: 3px;
-        background-color: #ff004f;
-        position: absolute;
-        left: 0;
-        bottom: -8px;
-        transition: 0.5s;
-    }
+ 
+.about-col-2 {
+    flex-basis: 60%;
+}
+ 
+.about-col-2 p {
+    font-size: 16px; /* Slightly larger font for readability */
+    line-height: 1.7; /* Increased line spacing */
+    margin-top: 20px;
+}
+ 
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+    
+    /* Typewriter effect for Software Engineering */
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #ff004f;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 2s steps(20, end), blink-caret .75s step-end infinite;
+}
 
-    .tab-links.active-link::after{
-        width: 50%;
-    }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-    .tab-contents ul li{
-        list-style: none;
-        margin: 10px 0;
-    }
-    .tab-contents ul li span{
-        color: #ff004f;
-        font-size: 14px;
-    }
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ff004f; }
+}
+
+/* 3D floating and rotating animation for profile image */
+.profile-3d {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 1.5px 8px #ff004f;
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+    animation: float3d 4s ease-in-out infinite alternate, rotate3d 10s linear infinite;
+    background: linear-gradient(135deg, #ff004f33 0%, #fff0 100%);
+    border: 6px solid #222;
+}
+
+@keyframes float3d {
+    0%   { transform: translateY(0px) scale(1); }
+    50%  { transform: translateY(-30px) scale(1.04); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+@keyframes rotate3d {
+    0%   { box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 1.5px 8px #ff004f; }
+    25%  { box-shadow: 20px 40px 60px rgba(0,0,0,0.3), 0 1.5px 8px #ff004f; }
+    50%  { box-shadow: 0 40px 80px rgba(0,0,0,0.2), 0 1.5px 8px #ff004f; }
+    75%  { box-shadow: -20px 40px 60px rgba(0,0,0,0.3), 0 1.5px 8px #ff004f; }
+    100% { box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 1.5px 8px #ff004f; }
+}
+
+.profile-3d:hover {
+    transform: scale(1.07) rotateY(8deg) rotateX(8deg);
+    box-shadow: 0 40px 80px rgba(255,0,79,0.5), 0 4px 16px #ff004f;
+    cursor: pointer;
+}
+/* ---------------------------------
+    NEW STYLES FOR MY Projects SECTION
+---------------------------------
+*/
+
+#projects {
+    padding: 50px 10px;
+}
+/* Projects Section */
+
+#projects {
+
+    padding: 80px 0;
+
+}
+#projects .sub-title {
+  margin-top: 50px; /* adjust until it looks right */
+}
+
+ 
+.project-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    grid-gap: 40px;
+
+    margin-top: 50px;
+
+}
+ 
+.project-card {
+
+    border-radius: 10px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px px rgba(0, 0, 0, 0.2);
+
+}
+ 
+.project-card img {
+
+    width: 80%;
+
+    height: 80%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+
+}
+ 
+.project-card .layer {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 70%);
+
+    border-radius: 10px;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 25px;
+
+    transition: background 0.5s;
+
+}
+ 
+.project-card:hover .layer { 
+
+    background: linear-gradient(180deg, rgba(255,0,79,0.3) 0%, #ff004f 100%); 
+
+}
+ 
+.project-card .layer h3 { 
+
+    font-weight: 600; 
+
+    font-size: 22px; 
+
+    margin-bottom: 10px; 
+
+    color: #fff; 
+
+}
+ 
+.project-card .layer p, 
+
+.project-card .layer a { 
+
+    opacity: 0; 
+
+    transition: opacity 0.5s, transform 0.5s; 
+
+    transform: translateY(20px); 
+
+}
+ 
+.project-card:hover .layer p, 
+
+.project-card:hover .layer a { 
+
+    opacity: 1; 
+
+    transform: translateY(0); 
+
+}
+ 
+.project-card .layer a { 
+
+    color: #ff004f; 
+
+    margin-top: 20px; 
+
+    background: #fff; 
+
+    width: 60px; 
+
+    height: 60px; 
+
+    border-radius: 50%; 
+
+    display: flex; 
+
+    align-items: center; 
+
+    justify-content: center; 
+
+    text-decoration: none; 
+
+}
+ 
+.btn-see-more { 
+
+    display: block; 
+
+    margin: 50px auto; 
+
+    width: fit-content; 
+
+    border: 1px solid #ff004f; 
+
+    padding: 14px 50px; 
+
+    border-radius: 6px; 
+
+    text-decoration: none; 
+
+    color: #fff; 
+
+    transition: background 0.5s; 
+
+}
+ 
+.btn-see-more:hover { 
+
+    background: #ff004f; 
+
+}
+ 
+/* CSS for "See more" functionality */
+
+#projects .project-list .project-card:nth-child(n+4) {
+
+    display: none;
+
+}
+ 
+#projects .project-list.show-all-projects .project-card {
+
+    display: block;
+
+}
+ 
+#proj-see-less-btn {
+
+    display: none;
+
+}
+ 
+/* ---------------------------------
+    STYLES FOR SKILLS SECTION
+---------------------------------*/
+
+#skills {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    padding: 80px 20px; /* Added horizontal padding */
+}
+
+#skills .sub-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted min width for better fit */
+    gap: 30px; /* shorthand for grid-gap */
+    width: 100%;
+    max-width: 1200px; /* Limit max width for wide screens */
+    justify-items: center; /* Center each skill card horizontally */
+}
+
+.skill-card {
+    background: #262626;
+    padding: 20px; /* slightly smaller padding for compact cards */
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.5s, transform 0.5s;
+    cursor: default;
+}
+
+.skill-card i {
+    font-size: 3rem; /* Increase icon size */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* ---------------------------------
+    STYLES FOR CERTIFICATES SECTION
+---------------------------------
+*/
+ 
+/* ----------------------------
+   Certificates Section
+---------------------------- */
+
+#certificates {
+    padding: 80px 0;
+    background: none; /* Remove dark background */
+    color: #333; /* Default text color */
+}
+
+#certificates .sub-title {
+    text-align: center;
+    color: #000;
+}
+
+.certificate-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.certificate-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background: none; /* Remove card background */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* optional shadow */
+    transition: transform 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Optional overlay for hover text */
+.certificate-card .layer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05); /* very light overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: background 0.3s;
+}
+
+.certificate-card:hover .layer {
+    background: rgba(255, 0, 79, 0.15); /* slight pinkish hover */
+}
+
+.certificate-card .layer h3,
+.certificate-card .layer p,
+.certificate-card .layer a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.certificate-card:hover .layer h3,
+.certificate-card:hover .layer p,
+.certificate-card:hover .layer a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certificate-card .layer h3 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.certificate-card .layer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.certificate-card .layer a {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* See More / See Less */
+#certificates .certificate-list .certificate-card:nth-child(n+4) {
+    display: none;
+}
+
+#certificates .certificate-list.show-all-certs .certificate-card {
+    display: block;
+}
+
+#cert-see-less-btn {
+    display: none;
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 85%;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ 
+/* ... (the rest of your skill-card styles remain the same) ... */
+
+/* ---------------------------------
+    STYLES FOR CONTACT SECTION
+---------------------------------
+*/
+
+#contact {
+    padding: 80px 0;
+}
+
+/* Reusing the .container class you already have */
+#contact .container {
+    padding: 0 10%;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    display: flex; /* Aligns icon and text */
+    align-items: center;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px); /* Lifts the icon on hover */
+}
+
+/* General button style, can be reused */
+.btn {
+    display: inline-block;
+    background: #ff004f;
+    padding: 14px 60px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.5s;
+}
+
+.btn.btn2 {
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background: #c9003e; /* A slightly darker shade for hover */
+}
+
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form textarea {
+    resize: vertical; /* Allows user to resize height only */
+}
+
+form .btn2 {
+    margin-top: 20px;
+}
+.container {     padding: 10px 20px; /* Padding for mobile */max-width: 1100px;  /* Sets a maximum width for the content area */margin-left: auto;  /* These two lines automatically center the container */margin-right: auto; }
+ 
+/* Fix scroll offset so headings don't hide behind navbar */
+section, 
+#about, #projects, #skills, #certificates, #contact {
+  scroll-margin-top: 100px; /* adjust this to match your navbar height */
+}
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #262626;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s, color 0.3s;
+    z-index: 2000;
+}
+
+#theme-toggle:hover {
+    background: #ff004f;
+    color: #fff;
+}
+
+/* Light Theme Styles */
+body.light-mode {
+    background: #fff;
+    color: #000;
+}
+
+body.light-mode .sub-title {
+    color: #000;
+}
+
+body.light-mode .certificate-card .layer {
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.8) 70%);
+}
+
+body.light-mode .testimonial-pdf a {
+    background: #f1f1f1;
+    color: #000;
+}
+
+body.light-mode .testimonial-pdf a:hover {
+    background: #ff004f;
+    color: #fff;
+}
+
+body.light-mode #theme-toggle {
+    background: #ddd;
+    color: #000;
+}
+

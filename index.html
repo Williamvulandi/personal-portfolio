@@ -1,77 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UFT-8">
-        <meta http-equiv="X-UA-compatible" content="IE=edge">
-        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Portfolio</title>
-        <link rel="stylesheet" href="style.css">
- </head>
- <body>
-<div id="header">
-    <div class="container-home">
-        <nav>
-            <img src="images/logo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            <p>Juniour Software Developer</p>
-            <h2>Hi, I'm <span>William</span><br>Vulandi From South Africa</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+        
+        <div class="container-home">
+            <nav><img src="images/Wills_techlogo.png" class="logo">
+                <ul id="nav-links">
+                    <li>
+                        <a href="#header">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#skills">My Skills</a>
+                    </li>
+                    <li>
+                        <a href="#certificates">Certificates</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Me</a>
+                    </li>
+                    <i class="fas fa-times" onclick="closeMenu()">
+
+                    </i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+ 
+            <div class="header-content" style="display: flex; align-items: center; justify-content: space-between;">
+                <div class="header-text">
+                    <div class="typewriter-section">
+                        <p id="typewriter-1"></p>
+                        <h2 id="typewriter-2"></h2>
+                        <h2 id="typewriter-3"></h2>
+                    </div>
+                </div>
+                <img
+                    src="images/Wills.jpeg"
+                    alt="Header Banner"
+                    class="profile-3d"
+                    style="height: 400px; width: 400px; margin-right: 100px; border-radius: 50%; object-fit: cover; margin-top: 150px;"
+                >
+            </div>
+        </div>
+    </div>
+    <button id="theme-toggle">🌙</button>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/WhatsApp Image 2025-09-01 at 06.10.26 (1).jpeg" alt="Your Name">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a passionate and detail-oriented Software Developer with hands-on experience in designing, building, and deploying web applications. Skilled in front-end and back-end development, I enjoy transforming ideas into functional, user-friendly, and scalable solutions. My expertise includes working with HTML, CSS, JavaScript, React, Node.js, and databases, along with version control systems like Git.<br><br>
+                        I am continuously learning and exploring new technologies to stay up to date with industry trends. I thrive in collaborative environments but can also work independently to solve problems efficiently. My goal is to create impactful software that improves user experience, drives innovation, and adds real business value.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="project-list">
+                <div class="project-card">
+                    <img src="images/Sentiment.png" alt="Project 1 Screenshot">
+                    <div class="layer">
+                        <h3>Dash Analysis</h3>
+                        <p>Sentiment Dashboard.</p>
+                        <a href="https://regal-gnome-67958c.netlify.app" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/Online App.png" alt="Project 2 Screenshot">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Nike Online Store.</p>
+                        <a href="https://ideal-train-4jqrg4pp6rr72pp-5500.app.github.dev/" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/Citi.png" alt="Project 3 Screenshot">
+                    <div class="layer">
+                        <h3>Travel Website</h3>
+                        <p>Citi Sightseeing.</p>
+                        <a href="https://urban-trout-69vpr6xxw769cpw6-5501.app.github.dev/" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <img src="images/project-placeholder.png" alt="Project Placeholder">
+                    <div class="layer"><h3>Project Title 4</h3><p>A short description of this project.</p><a href="#" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project-placeholder.png" alt="Project Placeholder">
+                    <div class="layer"><h3>Project Title 5</h3><p>A short description of this project.</p><a href="#" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project-placeholder.png" alt="Project Placeholder">
+                    <div class="layer"><h3>Project Title 6</h3><p>A short description of this project.</p><a href="#" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project-placeholder.png" alt="Project Placeholder">
+                    <div class="layer"><h3>Project Title 7</h3><p>A short description of this project.</p><a href="#" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project-placeholder.png" alt="Project Placeholder">
+                    <div class="layer"><h3>Project Title 8</h3><p>A short description of this project.</p><a href="#" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project-placeholder.png" alt="Project Placeholder">
+                    <div class="layer"><h3>Project Title 9</h3><p>A short description of this project.</p><a href="#" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                </div>
+            </div>
+            <a href="#" id="proj-see-more-btn" class="btn-see-more">See more</a>
+            <a href="#" id="proj-see-less-btn" class="btn-see-more">See less</a>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skills-list">
+                <div class="skill-card">
+                    <i class="devicon-html5-plain-wordmark colored"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-css3-plain-wordmark colored"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-python-plain colored"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-react-original-wordmark colored"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-nodejs-plain-wordmark colored"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-git-plain-wordmark colored"></i>
+                    <h3>Git</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-github-original-wordmark colored"></i>
+                    <h3>GitHub</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-vscode-plain-wordmark colored"></i>
+                    <h3>VS Code</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-word" style="color: #2b579a;"></i>
+                    <h3>Word</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-excel" style="color: #217346;"></i>
+                    <h3>Excel</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-powerpoint" style="color: #b7472a;"></i>
+                    <h3>PowerPoint</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates Section -->
+    <div id="certificates">
+        <div class="container">
+            <h1 class="sub-title">Certificates</h1>
+            <div class="certificate-list">
+                <div class="certificate-card">
+                    <img src="images/python.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Python Data Structures and Algorithms</h3>
+                        <p>Issued LinkedIn Learning</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/SDL.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Software Development Life Cycle (SLD)</h3>
+                        <p>Issued by LinkedIn Learning</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Engineering critical thinking.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Critical Thinking for Software Engineers</h3>
+                        <p>Issued by LinkedIn Learning</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Introduction to generative AI.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Introduction to generative AI</h3>
+                        <p>Issued by Cousera</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Introduction To Artificial Inteligence.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Introduction To Artificial Inteligence</h3>
+                        <p>Issued by Cousera</p><a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Write professiona email.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Write professiona emails in English</h3>
+                        <p>Issued by Cousera</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Verbal Communication.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Verbal Communication and Practical Skills</h3>
+                        <p>Issued by Cousera</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Prompt Engineering.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Prompt Engineering with AI</h3>
+                        <p>Issued by Organization</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Generative AI.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Generative AI With Large Language Models</h3>
+                        <p>Issued by AWS</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Active listening.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Active Listening: Enhancing Communication Skills</h3>
+                        <p>Issued by Cousera</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/AI for everyone.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>AI for everyone</h3>
+                        <p>Issued by Cousera</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Python for data science.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>Python for data science</h3>
+                        <p>Issued by Cousera</p><a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/AI Essentials.png" alt="Certificate Screenshot">
+                    <div class="layer">
+                        <h3>AI Essentials</h3>
+                        <p>Issued by Cousera</p>
+                        <a href="#" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#ff004f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="cert-see-more-btn" class="btn-see-more">See more</a>
+            <a href="#" id="cert-see-less-btn" class="btn-see-more">See less</a>
+        </div></div><div id="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+ 
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <!-- ...existing code... -->
+<!-- ...existing code... -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> williamvulandi@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> 067 120 0778</p>
+                <!-- Social icons with images -->
+                <div class="social-icons" style="margin: 20px 0;">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
+                        <img src="images/linklinkedin-removebg-preview (2).png" alt="LinkedIn" width="32" height="32" style="margin-right: 15px;">
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                        <img src="images/Facebook_Icon-removebg-preview.png" alt="Facebook" width="32" height="32" style="margin-right: 15px;">
+                    </a>
+                    <a href="https://x.com/" target="_blank" title="X (Twitter)">
+                        <img src="images/Xicon.webp" alt="X" width="32" height="32">
+                    </a>
+                </div>
+                <!-- Place your icon images in the 'images' folder:
+                     - images/linkedin.png
+                     - images/facebook.png
+                     - images/x.png
+                -->
+                <a href="bl" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right"><form action="https://formspree.io/f/xzzajnjd" method="POST"><input type="text" name="Name" placeholder="Your Name" required><input type="email" name="Email" placeholder="Your Email" required><textarea name="Message" rows="6" placeholder="Your Message" required></textarea><button type="submit" class="btn btn2">Submit</button></form></div>
+ 
         </div>
     </div>
 </div>
-<!-- -----------about----------- -->
-<div id="about">
-    <div class="container-about">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/user.png">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>I am a dedicated and pasionate Junior Software Developer, hungry for challenges and eager to learn. Ready to dive into coding and make an impact from day one.</p>
-                
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')"></p>Education</p>
-    </div>
-    <div class="tab-contents active-tab" id="skills">
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>    
-            <li>Java Script</li>
-        </ul>
-    </div>
-    <div class="tab-contents" id="experience">
-        <ul>
-            <li>Developed a fully functional calculator using HTML,CSS, Java Script</li>
-            <li>Implimented basic arithmetic operations and user interface design</li>
-            <li>Gained a practical experience in web development and JavaScript programming through hands-on project work</li>
-            <div class="tab-contents" id="education">
-                <ul>
-                    <li>Training at AlX institute</li>
-                    <li>HTML, CSS, JavaScript basics at Zio institute</li>
-                    <li>Currently passed the first assessment at Code Space</li>
-                </ul>
-            </div>
-        </ul>
+<!-- ...existing code... -->
         </div>
-    </div> 
     </div>
-
+</div>
+<!-- ...existing code... -->
+    <!-- Typewriter Animation Script -->
     <script>
+    const texts = [
+        { id: "typewriter-1", text: "Software Developer" },
+        { id: "typewriter-2", text: "Hi, I'm <span>William</span>" },
+        { id: "typewriter-3", text: "Vulandi From South Africa" }
+    ];
 
-        var tablinnks = document.getElementsByClassName("tab-links");
-        var tablinnks = document.getElementsByClassName("tab-contents");
+    function typeWriter(element, text, i, cb) {
+        if (i <= text.length) {
+            element.innerHTML = text.slice(0, i) + '<span style="border-right: .15em solid #ff004f"></span>';
+            setTimeout(() => typeWriter(element, text, i + 1, cb), 60);
+        } else {
+            element.innerHTML = text; // Remove cursor after typing
+            setTimeout(cb, 800); // Pause before next
+        }
+    }
 
+    function clearAll() {
+        texts.forEach(t => {
+            document.getElementById(t.id).innerHTML = "";
+        });
+    }
+
+    function loopLines() {
+        clearAll();
+        function showLine(idx) {
+            if (idx >= texts.length) {
+                setTimeout(() => {
+                    loopLines();
+                }, 1200);
+                return;
+            }
+            typeWriter(document.getElementById(texts[idx].id), texts[idx].text, 0, () => {
+                showLine(idx + 1);
+            });
+        }
+        showLine(0);
+    }
+    loopLines();
     </script>
 
- </body>
- </html>
+    <!-- Projects See More/See Less Script -->
+<script>
+    const projSeeMoreBtn = document.getElementById('proj-see-more-btn');
+    const projSeeLessBtn = document.getElementById('proj-see-less-btn');
+    const projectList = document.querySelector('#projects .project-list');
+    const projectsSection = document.getElementById('projects'); // section container
+
+    // "See more" button
+    projSeeMoreBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        projectList.classList.add('show-all-projects');
+        projSeeMoreBtn.style.display = 'none';
+        projSeeLessBtn.style.display = 'block';
+    });
+
+    // "See less" button
+    projSeeLessBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        projectList.classList.remove('show-all-projects');
+        projSeeLessBtn.style.display = 'none';
+        projSeeMoreBtn.style.display = 'block';
+
+        // Scroll back to the Projects section
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+<!-- Certificates See More/See Less Script -->
+<script>
+    const certSeeMoreBtn = document.getElementById('cert-see-more-btn');
+    const certSeeLessBtn = document.getElementById('cert-see-less-btn');
+    const certificateList = document.querySelector('#certificates .certificate-list');
+    const certificatesSection = document.getElementById('certificates'); // section container
+
+    // "See more" button
+    certSeeMoreBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        certificateList.classList.add('show-all-certs');
+        certSeeMoreBtn.style.display = 'none';
+        certSeeLessBtn.style.display = 'block';
+    });
+
+    // "See less" button
+    certSeeLessBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        certificateList.classList.remove('show-all-certs');
+        certSeeLessBtn.style.display = 'none';
+        certSeeMoreBtn.style.display = 'block';
+
+        // Scroll back to the Certificates section
+        certificatesSection.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+ <script>
+    // --- SCRIPT FOR CERTIFICATE LIGHTBOX ---
+    // --- New JS ---
+
+    const lightbox = document.getElementById('lightbox');
+
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    const certificateCards = document.querySelectorAll('.certificate-card');
+
+    const closeBtn = document.querySelector('#lightbox .close');
+ 
+    certificateCards.forEach(card => {
+
+        card.addEventListener('click', () => {
+
+            const imgSrc = card.querySelector('img').src;
+
+            lightboxImg.src = imgSrc;
+
+            lightbox.style.display = 'block';
+
+        });
+
+    });
+ 
+    function closeLightbox() {
+
+        lightbox.style.display = 'none';
+
+    }
+ 
+    closeBtn.addEventListener('click', closeLightbox);
+ 
+    lightbox.addEventListener('click', (event) => {
+
+        // Close if the click is on the background, not the image itself
+
+        if (event.target === lightbox) {
+
+            closeLightbox();
+
+        }
+
+    });
+</script>
+
+<script>     var navLinks = document.getElementById("nav-links");     function openMenu() {         navLinks.style.right = "0";     }     function closeMenu() { navLinks.style.right = "-200px"; } </script>
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        if (body.classList.contains('light-mode')) {
+            toggleBtn.textContent = "☀️";
+        } else {
+            toggleBtn.textContent = "🌙";
+        }
+    });
+</script>
+
+ 
+ 
+</body>
+</html>
