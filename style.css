@@ -478,7 +478,11 @@ body.light-mode .sub-title {
 
 #certificates .sub-title {
     text-align: center;
-    color: #000;
+    color: #fff;
+}
+
+body.light-mode #certificates .sub-title {
+    color: #111;
 }
 
 .certificate-list {
