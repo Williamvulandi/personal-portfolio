@@ -220,6 +220,7 @@ body.light-mode .sub-title {
 }
 #projects .sub-title {
   margin-top: 50px; /* adjust until it looks right */
+  text-align: center;
 }
 
  
