@@ -573,8 +573,24 @@ body.light-mode #certificates .sub-title {
     justify-content: center;
 }
 
+/* Certificate Category Titles */
+.cert-category-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+    border-bottom: 3px solid #ff004f;
+    padding-bottom: 15px;
+}
+
+body.light-mode .cert-category-title {
+    color: #000;
+}
+
 /* See More / See Less */
-#certificates .certificate-list .certificate-card:nth-child(n+4) {
+#certificates .certificate-list .certificate-card:nth-child(n+10) {
     display: none;
 }
 
