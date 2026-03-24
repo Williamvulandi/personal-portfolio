@@ -590,14 +590,11 @@ body.light-mode .cert-category-title {
 }
 
 /* See More / See Less */
-#certificates .certificate-list .certificate-card:nth-child(n+10) {
-    display: none;
-}
-
-#certificates .certificate-list.show-all-certs .certificate-card {
+#certificates .certificate-list .certificate-card {
     display: block;
 }
 
+#cert-see-more-btn,
 #cert-see-less-btn {
     display: none;
 }
